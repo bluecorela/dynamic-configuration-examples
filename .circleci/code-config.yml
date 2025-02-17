@@ -12,7 +12,7 @@ jobs:
       - run: echo "Building code"
 
 workflows:
-  s-workflow:
+  s1-workflow:
     jobs:
       - lint # use the shared lint job.
       - test # use the shared test job.

@@ -4,7 +4,7 @@ parameters:
   always-continue:
     type: boolean
     default: false
-    
+
 jobs:
   build-docs:
     docker:
@@ -13,7 +13,7 @@ jobs:
       - run: echo "Building docs"
 
 workflows:
-  s-workflow:
+  s2-workflow:
     jobs:
       - lint # use the shared lint job.
       - build-docs
