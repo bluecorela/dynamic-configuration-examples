@@ -2,8 +2,8 @@ version: 2.1
 
 parameters:
   always-continue:
-    type: boolean
-    default: false
+    type: string
+    default: ""
 
 jobs:
   build-docs:
@@ -11,6 +11,11 @@ jobs:
       - image: cimg/base:stable
     steps:
       - run: echo "Building docs"
+  lint:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "Running linting"
 
 workflows:
   s2-workflow:

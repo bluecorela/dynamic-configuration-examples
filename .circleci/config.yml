@@ -14,6 +14,5 @@ workflows:
           base-revision: generate-config-file-main
           config-path: .circleci/no-updates.yml
           mapping: | # The mapping will be used to generate the dynamic configuration for all conditions that match.
-            .* always-continue true .circleci/shared-config.yml
-            src/.* always-continue true .circleci/code-config.yml
-            docs/.* always-continue true .circleci/docs-config.yml
+            src/.* always-continue "comida" .circleci/code-config.yml
+            docs/.* always-continue "bebida" .circleci/docs-config.yml

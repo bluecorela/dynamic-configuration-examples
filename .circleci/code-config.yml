@@ -2,14 +2,25 @@ version: 2.1
 
 parameters:
   always-continue:
-    type: boolean
-    default: false
+    type: string
+    default: ""
 jobs:
   build-code:
     docker:
       - image: cimg/base:stable
     steps:
       - run: echo "Building code"
+  lint:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "Running linting"
+
+  test:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "Running tests"
 
 workflows:
   s1-workflow:
