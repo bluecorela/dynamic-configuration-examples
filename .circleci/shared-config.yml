@@ -5,12 +5,6 @@ parameters:
   always-continue:
     type: boolean
     default: false
-  build-code:
-    type: boolean
-    default: false
-  build-docs:
-    type: boolean
-    default: false
 
 # define the shared jobs that will be available for all continued workflows.
 jobs:
